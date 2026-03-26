@@ -1,28 +1,113 @@
-<!doctype html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Navbar</title>
     <style>
       body {
-        background-color: #874141;
+        background-color: #8df;
+        font-family: "Times New Roman", Times, serif;
+        margin: 0;
+        padding: 20px;
       }
-      .di::after {
-        background-color: #a12e8c;
-        content: "hh";
-        display: block;
-        clear: both;
+      .nav1 {
+        background-color: #858fac;
+        color: #db0b0b;
+        border: none;
+        padding: 15px 15px;
+        border-radius: 5px;
+      }
+      .nav1 ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .nav1 li {
+        display: inline;
+        border: 1px solid rgb(241, 228, 228);
+      }
+      .nav1 a {
+        text-decoration: none;
+        color: rgb(56, 40, 11);
+        padding: 5px 15px;
+        /* background-color: #fff; */
+        position:relative
+      }
+      .nav1 a::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        bottom: 0px;
+        left: 0;
+        background-color: #0a65c7;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+      .nav1 a:hover::after{
+        transform: scaleX(1);
+      }
+      .nav1 .login-btn {
+        background-color: #c4ceeb;
+        color: #db0b0b;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .nav2{
+        background-color: #b6de8e;
+        width: 200px;
+        padding:20px;
+      }
+      .nav2 ul{
+        list-style-type: none;
+        margin:0;
+        padding: 0;
+      }
+      .nav2 li{
+        margin-bottom: 12px;
+      }
+      .nav2 a{
+        text-decoration: none;
+        color: rgb(3, 20, 27);
+        display:block;
+        width:100%;
+        padding: 10px;
+      }
+      .nav2 a:hover{
+        background-color: blueviolet;
+        color:blue;
+      }
+      .nav2 .login-btn {
+        background-color: #965b5b;
+        color: #fff;
+        border: none;
+        width: 100%;
+        padding: 10px;
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <p class="di">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nemo
-      perspiciatis saepe repudiandae labore natus veniam. Mollitia, consequatur.
-      Distinctio, deserunt non esse saepe exercitationem, consequuntur sit ipsum
-      at, fugiat soluta animi? A reiciendis, dolorem, dolore animi, pariatur
-      magni incidunt commodi cumque sequi quam qui.
-    </p>
+    <h2>Variation 1: Horizontal with underline effect</h2>
+    <nav class="nav1">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li class="login-btn"><a href="#">Login</a></li>
+      </ul>
+    </nav>
+    <h2>Variation 2: Vertical with hover effect</h2>
+    <nav class="nav2">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#" class="login-btn">Login</a></li>
+      </ul>
+    </nav>
   </body>
 </html>
